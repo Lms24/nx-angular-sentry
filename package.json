@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "preview": "nx serve-static"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/router": "~16.0.0",
     "@nx/angular": "16.3.0",
     "@sentry/angular-ivy": "^7.53.1",
+    "@sentry/webpack-plugin": "^2.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

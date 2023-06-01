@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/angular-nx-webpack-plugin",
@@ -17,7 +17,15 @@
         "tsConfig": "./tsconfig.app.json",
         "assets": ["./src/favicon.ico", "./src/assets"],
         "styles": ["./src/styles.css"],
-        "scripts": []
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "./webpack.config.js"
+        },
+        "sourceMap": {
+          "scripts": true,
+          "styles": true,
+          "vendor": true
+        }
       },
       "configurations": {
         "production": {
